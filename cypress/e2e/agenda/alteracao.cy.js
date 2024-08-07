@@ -1,11 +1,8 @@
 /// <reference types="cypress" />
 
-describe('Teste para inclusão de contato na agenda', () => {
-    beforeEach(() => {
-        cy.visit('https://agenda-contatos-react.vercel.app/')
-    })
-
+describe('Teste para alteração de contato na agenda', () => {
     it('Deve altera o primeiro contato da agenda', () => {
+        cy.visit('https://agenda-contatos-react.vercel.app/')
         cy.get(':nth-child(2) > .sc-gueYoa > .edit').click()
         cy.get('[type="text"]').clear()
         cy.get('[type="text"]').type('Ramon Silva')
